@@ -29,7 +29,7 @@ const convertValues = () => {
   }
 
   if(select.value ==="Bitcoin") {
-    currencyValueText.innerHTML = (inputReais / bitCoin).toFixed(5)
+    currencyValueText.innerHTML = "BTC " + (inputReais / bitCoin).toFixed(4)
   }
 
 
