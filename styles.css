@@ -19,6 +19,7 @@ body {
 
 header {
     background-color: #1B83E2;
+    background-image: linear-gradient(45deg, #1B83E2, red);
     height: 66px;
 }
 
@@ -26,6 +27,7 @@ h1 {
     font-size: 24px;
     line-height: 64%;
     color: #f4f4f4;
+    text-shadow: #000 2px 2px 1px;
     text-align: center;
     padding-top: 25px;
 }
@@ -73,6 +75,7 @@ button {
     height: 48px;
     width: 100%;
     background: #1B83E2;
+    background-image: linear-gradient(45deg, #1B83E2, red);
     border-radius: 25px;
     cursor: pointer;
     font-style: normal;
@@ -80,6 +83,7 @@ button {
     font-size: 16px;
     line-height: 18px;
     color: #F4F4F4;
+    text-shadow: #000 2px 2px 1px;
     border: none;
     margin-top: 24px;
     margin-bottom: 36px;
@@ -94,7 +98,7 @@ button:active {
 }
 
 section {
-    border: 1px solid #1B83E2;
+    border: 3px solid #1B83E2;
     border-radius: 4px;
 }
 
