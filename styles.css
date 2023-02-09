@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 105vh;
 }
 
 .container {
@@ -58,7 +58,7 @@ select {
     padding-left: 16px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
     margin-top: 6px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 input {
@@ -89,7 +89,7 @@ button {
     color: #F4F4F4;
     text-shadow: #000 2px 2px 1px;
     border: none;
-    margin-top: 24px;
+    margin-top: 20px;
     margin-bottom: 16px;
 }
 
