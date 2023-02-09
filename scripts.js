@@ -28,28 +28,40 @@ const convertValues = async () => {
       { style: 'currency', currency: "USD" }
     ).format(inputReais / dolar)
     
-    let data_americana = dateDolar;
-    let data_brasileira = data_americana.split('-').reverse().join('/');
+    const newDateDolar = dateDolar.substr(0,10)
+    const hourDolar = dateDolar.substr(10) 
+   
+    let data_americana = newDateDolar
+    let data_brasileira = data_americana.split('-').reverse().join('/')
 
-    // Pronto! A data foi convertida.
-    console.log(data_brasileira);
-    dateQuote.innerHTML = data_brasileira
-
+    dateQuote.innerHTML = `${data_brasileira}${hourDolar}`
   }
 
   if (select.value === "€ Euro") {
     currencyValueText.innerHTML = new Intl.NumberFormat("de-DE",
       { style: 'currency', currency: "EUR" }
     ).format(inputReais / euro)
-    dateQuote.innerHTML = data.EURBRL.create_date
+
+    const newDateEuro = dateEuro.substr(0,10)
+    const hourEuro = dateEuro.substr(10) 
+   
+    let data_americana = newDateEuro
+    let data_brasileira = data_americana.split('-').reverse().join('/')
+
+    dateQuote.innerHTML = `${data_brasileira}${hourEuro}`
 
   }
 
   if (select.value === "Bitcoin") {
     currencyValueText.innerHTML = "BTC " + (inputReais / bitCoin).toFixed(4)
 
-    dateQuote.innerHTML = data.BTCBRL.create_date
+    const newDateBitcoin = dateBitcoin.substr(0,10)
+    const hourBitcoin = dateBitcoin.substr(10) 
+   
+    let data_americana = newDateBitcoin
+    let data_brasileira = data_americana.split('-').reverse().join('/')
 
+    dateQuote.innerHTML = `${data_brasileira}${hourBitcoin}`
   }
 
 
