@@ -7,13 +7,18 @@ const convertValues = async () => {
   const inputReais = document.getElementById("input-real").value
   const realValueText = document.getElementById("real-value-text")
   const currencyValueText = document.getElementById("currency-value-text")
+  const dateQuote = document.getElementById("quote-time")
 
- const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then( dados => dados.json())
- console.log(data)
- const dolar = data.USDBRL.high
- const euro = data.EURBRL.high
- const bitCoin = data.BTCBRL.high
-  
+  const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(dados => dados.json())
+  console.log(data)
+  const dolar = data.USDBRL.high
+  const euro = data.EURBRL.high
+  const bitCoin = data.BTCBRL.high
+  const dateDolar = data.USDBRL.create_date
+  const dateEuro = data.USDBRL.create_date
+  const dateBitcoin = data.USDBRL.create_date
+
+
   realValueText.innerHTML = new Intl.NumberFormat("pt-BR",
     { style: 'currency', currency: "BRL" }
   ).format(inputReais)
@@ -22,6 +27,13 @@ const convertValues = async () => {
     currencyValueText.innerHTML = new Intl.NumberFormat("en-US",
       { style: 'currency', currency: "USD" }
     ).format(inputReais / dolar)
+    
+    let data_americana = dateDolar;
+    let data_brasileira = data_americana.split('-').reverse().join('/');
+
+    // Pronto! A data foi convertida.
+    console.log(data_brasileira);
+    dateQuote.innerHTML = data_brasileira
 
   }
 
@@ -29,11 +41,15 @@ const convertValues = async () => {
     currencyValueText.innerHTML = new Intl.NumberFormat("de-DE",
       { style: 'currency', currency: "EUR" }
     ).format(inputReais / euro)
+    dateQuote.innerHTML = data.EURBRL.create_date
 
   }
 
-  if(select.value ==="Bitcoin") {
+  if (select.value === "Bitcoin") {
     currencyValueText.innerHTML = "BTC " + (inputReais / bitCoin).toFixed(4)
+
+    dateQuote.innerHTML = data.BTCBRL.create_date
+
   }
 
 

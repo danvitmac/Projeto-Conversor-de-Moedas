@@ -90,7 +90,7 @@ button {
     text-shadow: #000 2px 2px 1px;
     border: none;
     margin-top: 24px;
-    margin-bottom: 36px;
+    margin-bottom: 16px;
 }
 
 button:hover {
@@ -99,6 +99,16 @@ button:hover {
 
 button:active {
     opacity: 0.7;
+}
+
+.quote-date {    
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 6px;
+    Font-size: 14px;
+    color: #777777;   
 }
 
 section {
