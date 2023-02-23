@@ -1,4 +1,3 @@
-
 <h1 align="center">Projeto Conversor de Moedas</h1>
 <br>
 <br>
@@ -6,6 +5,12 @@
 <br>
 <h3>Saiba mais em:<br><br><a href="https://plataforma.devclub.com.br/"><img src="https://github.com/danvitmac/Easy-Shopping/blob/master/assets/logo-DevClub.jpeg?raw=true" alt="logo-devclub" width="75px"></a></h3>
 <br>
+
+
+https://user-images.githubusercontent.com/119541720/220951993-fc733f1f-3807-4bf6-85fc-1490fae50965.mp4
+
+
+
 <h3>Tecnologias empregadas:</h3>
 <br>
 
