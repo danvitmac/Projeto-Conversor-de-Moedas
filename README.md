@@ -1,5 +1,5 @@
 
-<h1 align="center">Projeto-Conversor de Moedas</h1>
+<h1 align="center">Projeto Conversor de Moedas</h1>
 <br>
 <br>
 <h3>Esse projeto eu executei estudando no DevClub.</h3>
