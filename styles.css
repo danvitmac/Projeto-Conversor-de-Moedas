@@ -7,7 +7,8 @@
 }
 
 body {
-    background-color: #E5E5E5;
+    background: url(./assets/bull-market.jpg);
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,3 +141,20 @@ section {
     color: #1B83E2;
 }
 
+@media screen and (max-width: 980px) {
+    body {
+        background-size: cover;
+    }
+
+   
+}
+
+@media screen and (max-width: 380px) {
+    body {
+        background-size: cover;
+    }
+
+    .container {
+        width: 70%;
+    }
+}
