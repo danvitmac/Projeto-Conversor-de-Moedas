@@ -28,8 +28,8 @@ const convertValues = async () => {
       { style: 'currency', currency: "USD" }
     ).format(inputReais / dolar)
     
-    const newDateDolar = dateDolar.substr(0,10)
-    const hourDolar = dateDolar.substr(10) 
+    const newDateDolar = dateDolar.substr(2,8)
+    const hourDolar = dateDolar.substr(10,6) 
    
     let data_americana = newDateDolar
     let data_brasileira = data_americana.split('-').reverse().join('/')
@@ -42,8 +42,8 @@ const convertValues = async () => {
       { style: 'currency', currency: "EUR" }
     ).format(inputReais / euro)
 
-    const newDateEuro = dateEuro.substr(0,10)
-    const hourEuro = dateEuro.substr(10) 
+    const newDateEuro = dateEuro.substr(2,8)
+    const hourEuro = dateEuro.substr(10,6) 
    
     let data_americana = newDateEuro
     let data_brasileira = data_americana.split('-').reverse().join('/')
@@ -55,8 +55,8 @@ const convertValues = async () => {
   if (select.value === "Bitcoin") {
     currencyValueText.innerHTML = "BTC " + (inputReais / bitCoin).toFixed(4)
 
-    const newDateBitcoin = dateBitcoin.substr(0,10)
-    const hourBitcoin = dateBitcoin.substr(10) 
+    const newDateBitcoin = dateBitcoin.substr(2,8)
+    const hourBitcoin = dateBitcoin.substr(10,6) 
    
     let data_americana = newDateBitcoin
     let data_brasileira = data_americana.split('-').reverse().join('/')
